@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<TableRow android:orientation="horizontal"
+		android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:id="@+id/buttonrow" android:visibility="visible"
+		android:gravity="center_horizontal" android:layout_gravity="fill_horizontal|bottom">
+		<Button android:text="Load File 1" android:id="@+id/loadButton"
+			android:layout_weight="1" android:layout_width="fill_parent" android:layout_height="wrap_content"></Button>
+		<Button android:text="Load File 2" android:id="@+id/loadButton2"
+			android:layout_weight="1"  android:layout_width="fill_parent" android:layout_height="wrap_content"></Button>
+	</TableRow>
+
+
+	<TextView android:id="@+id/fileText" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="File Name 1"
+		android:layout_below="@+id/buttonrow" />
+	<EditText android:layout_width="fill_parent" android:id="@+id/mdfive"
+		android:text="MD5" android:layout_height="wrap_content"
+		android:layout_below="@+id/fileText"></EditText>
+	<TextView android:id="@+id/fileText2" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="File Name 2"
+		android:layout_below="@+id/mdfive" />
+	<EditText android:layout_width="fill_parent" android:id="@+id/mdfive2"
+		android:text="MD5" android:layout_height="wrap_content"
+		android:layout_below="@+id/fileText2"></EditText>
+			<TextView android:id="@+id/resultsText" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="Do they match?"
+		android:layout_below="@+id/mdfive2" />
+	<com.google.ads.AdView android:id="@+id/adView"
+		android:layout_alignParentBottom="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" ads:adUnitId="a14ded92f9b9206"
+		ads:adSize="BANNER" ads:loadAdOnCreate="true" />
+</RelativeLayout>
